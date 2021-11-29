@@ -4,7 +4,7 @@ I have implemented two basic ways of calculating Bernoulli numbers.
 
 Because the Bernoulli numbers are rational, they should be represented by an integer numerator and integer denominator.
 These integers get very large. So large that they quickly overflow even a long int.
-To work around this, the GNU Multiple Precision Library (GMP) is usedz
+To work around this, the GNU Multiple Precision Library (GMP) is used
 
 GMP provides an API for working with integers and rational of any size. The only constraint being the computer's memory.
 GMP provides an integer datatype, mpz (multiple precsion integer) and a ratoinal datatype, mpq (multiple precision rational)
