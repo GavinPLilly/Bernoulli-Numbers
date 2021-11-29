@@ -77,8 +77,7 @@ void bern_up_to_helper(mpq_t *res_arr, int n) {
 		// set cur_term to the prod of the nCk * num * den
 		mpz_bin_uiui(tmp_int, n, i); // nCk
 		mpq_set_z(cur_term, tmp_int); // Set cur_term to nCk
-		mpq_set_si(sub_term, n - i + 1, 1); // Set the subterm to n - k + 1
-		mpq_inv(sub_term, sub_term); // "flip" the fraction
+		mpq_set_si(sub_term, 1, n - i + 1); // Set the subterm to n - k + 1
 		mpq_mul(cur_term, cur_term, sub_term); 
 		mpq_mul(cur_term, cur_term, res_arr[i]);
 		mpq_add(sum, sum, cur_term); // Add the cur_term to the sum
@@ -133,10 +132,10 @@ mpq_t *bern_up_to(int n) {
 // For testing purposes
 int main() {
 	int n = 2000;
-	mpq_t *berns;
-	//mpq_t *bern_n;
-	berns = bern_up_to(n);
-	//bern_n = bern(n);
+	// mpq_t *berns;
+	mpq_t *bern_n;
+	// berns = bern_up_to(n);
+	bern_n = bern(n);
 	/*
 	for(int i = 0; i < n + 1; i++) {
 		printf("%d: ", i);
@@ -144,9 +143,9 @@ int main() {
 		printf("\n");
 	}
 	*/
-	printf(mpq_get_str(NULL, 10, berns[n]));
-	//printf("\n\n\n");
-	//printf(mpq_get_str(NULL, 10, *bern_n));
+	printf("calculating B(%d)...\n", n);
+	// printf(mpq_get_str(NULL, 10, berns[n]));
+	printf(mpq_get_str(NULL, 10, *bern_n));
 	printf("\n");
 	return 0;
 }
