@@ -1,3 +1,5 @@
 /Makefile
 /bernoulli.h
 /bernoulli.o
+/explicit_bernoulli.o
+/recursive_bernoulli.o

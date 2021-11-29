@@ -131,21 +131,17 @@ mpq_t *bern_up_to(int n) {
 
 // For testing purposes
 int main() {
-	int n = 2000;
+	int n = 2000;	
+
+	// // Recursive calculation
 	// mpq_t *berns;
-	mpq_t *bern_n;
-	// berns = bern_up_to(n);
-	bern_n = bern(n);
-	/*
-	for(int i = 0; i < n + 1; i++) {
-		printf("%d: ", i);
-		printf(mpq_get_str(NULL, 10, berns[i]));
-		printf("\n");
-	}
-	*/
-	printf("calculating B(%d)...\n", n);
+	// berns = berns_up_to(n);
 	// printf(mpq_get_str(NULL, 10, berns[n]));
-	printf(mpq_get_str(NULL, 10, *bern_n));
-	printf("\n");
+
+	// // Explicit calculation
+	// mpq_t *bern_n;
+	// bern_n = bern(n);
+	// printf(mpq_get_str(NULL, 10, *bern_n));
+
 	return 0;
 }
