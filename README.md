@@ -1,6 +1,6 @@
 # Bernoulli-Numbers
 
-I have implemented two basic ways of calculation Bernoulli numbers.
+I have implemented two basic ways of calculating Bernoulli numbers.
 
 Because the Bernoulli numbers are rational, they should be represented by an integer numerator and integer denominator.
 These integers get very large. So large that they quickly overflow even a long int.
